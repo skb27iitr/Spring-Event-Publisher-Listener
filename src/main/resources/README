@@ -1,0 +1,7 @@
+To start this application
+1. Press F5 to start this application
+2. Open any rest client and make a GET request to   http://localhost:8080/idx/start
+3. This will make a call to rest controller's start method.
+4. Call goes tp publisher's start
+5. puiblisher will create an event "SomeEvent" of type start
+6. event is then passed to listener(eventListener) asynchronously . This is done by adding annotation @Async to public method of listener and annotating at application level @EnableAsync
